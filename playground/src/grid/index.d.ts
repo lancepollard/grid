@@ -1,2 +1,3 @@
-import Grid from './Grid';
+import Grid, { GridColumnConfigType } from './Grid';
 export default Grid;
+export { GridColumnConfigType };

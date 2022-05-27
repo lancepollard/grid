@@ -1,5 +1,5 @@
 import React from 'react';
-import Grid from './grid';
+import Grid, { GridColumnConfigType } from './grid';
 
 type RecordType = {
   a: string;
@@ -16,15 +16,21 @@ while (i < 100) {
 const defaultColumns = [
   {
     header: () => 'A',
-    value: (record: RecordType) => record.a,
+    value: (record: RecordType, { isSelected }: GridColumnConfigType) => (
+      <div style={{ backgroundColor: isSelected ? 'red' : 'inherit' }}>{record.a}</div>
+    ),
   },
   {
     header: () => 'B',
-    value: (record: RecordType) => record.b,
+    value: (record: RecordType, { isSelected }: GridColumnConfigType) => (
+      <div style={{ backgroundColor: isSelected ? 'red' : 'inherit' }}>{record.b}</div>
+    ),
   },
   {
     header: () => 'C',
-    value: (record: RecordType) => record.c === true ? 'yes' : 'no',
+    value: (record: RecordType, { isSelected }: GridColumnConfigType) => (
+      <div style={{ backgroundColor: isSelected ? 'red' : 'inherit' }}>{record.c === true ? 'yes' : 'no'}</div>
+    ),
   }
 ];
 

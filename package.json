@@ -22,5 +22,10 @@
     "watch": "rollup -c -w",
     "playground": "cd playground && npm run start",
     "install-all": "yarn install && cd playground && yarn install"
+  },
+  "dependencies": {
+    "hotkeys-js": "^3.9.4",
+    "keycode": "^2.2.1",
+    "react-hotkeys-hook": "^3.4.6"
   }
 }

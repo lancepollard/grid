@@ -1,0 +1,103 @@
+.block {
+  outline: none;
+  cursor: default;
+  user-select: none; /* CSS3 (little to no support) */
+  -ms-user-select: none; /* IE 10+ */
+  -moz-user-select: none; /* Gecko (Firefox) */
+  -webkit-user-select: none; /* Webkit (Safari, Chrome) */
+  border-right: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
+  border-left: 1px solid transparent;
+  border-top: 1px solid transparent;
+  flex-shrink: 0;
+  display: flex;
+  position: relative;
+  padding: 12px 16px;
+  align-items: center;
+}
+
+.block:first-child {
+  border-left: 1px solid #dddddd;
+}
+
+.block:nth-child(2n) {
+  background: #f9f9f9;
+}
+
+.block input {
+  all: unset;
+  width: 100%;
+}
+
+.content {
+  z-index: 20;
+}
+
+.backdrop,
+.shadow {
+  border: 3px solid transparent;
+  position: absolute;
+  top: -2px;
+  bottom: -2px;
+  left: -2px;
+  right: -2px;
+  z-index: 10;
+}
+
+.blockIsEditable {
+  // placeholder class for now
+  cursor: default;
+}
+
+.blockIsFocused {
+  // placeholder class for now
+  cursor: default;
+}
+
+.blockIsSelected {
+  // placeholder class for now
+  cursor: default;
+}
+
+.blockIsEditing {
+  cursor: text !important;
+  user-select: auto; /* CSS3 (little to no support) */
+  -ms-user-select: auto; /* IE 10+ */
+  -moz-user-select: auto; /* Gecko (Firefox) */
+  -webkit-user-select: auto; /* Webkit (Safari, Chrome) */
+}
+
+.blockIsHighlighted .backdrop {
+  background: rgba(188, 176, 220, 0.3) !important;
+}
+
+.blockIsFocused .backdrop {
+  border: 3px solid #956ffa;
+}
+
+.blockIsEditing .backdrop {
+  -webkit-box-shadow: inset 0 0 2px #956ffa;
+  -moz-box-shadow: inset 0 0 2px #956ffa;
+  box-shadow: inset 0 0 2px #956ffa;
+  background: rgba(188, 176, 220, 0.15) !important;
+}
+
+.blockIsFocused .shadow {
+  box-shadow: 2px 2px 4px 0px #00000080;
+  z-index: 8;
+}
+
+.leftAlign {
+  text-align: left;
+  justify-content: left;
+}
+
+.centerAlign {
+  text-align: center;
+  justify-content: center;
+}
+
+.rightAlign {
+  text-align: right;
+  justify-content: right;
+}

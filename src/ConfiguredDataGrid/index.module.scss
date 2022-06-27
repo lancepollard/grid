@@ -1,0 +1,46 @@
+.dataGrid {
+  background: inherit;
+}
+
+.header {
+  background: inherit;
+}
+
+.headerRow {
+  display: flex;
+  flex-direction: row;
+}
+
+.body {
+  background: inherit;
+}
+
+.bodyRow {
+  display: flex;
+  flex-direction: row;
+}
+
+.sheet {
+  overflow-x: scroll;
+  height: 100%;
+
+  .header {
+    width: 100%;
+  }
+
+  .headerRow {
+    background: #f2f2f2;
+    border-top: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+
+    .headerBlock {
+      padding: 16px;
+      font-weight: bold;
+      border-right: 1px solid #dddddd;
+
+      &:first-child {
+        border-left: 1px solid #dddddd;
+      }
+    }
+  }
+}
